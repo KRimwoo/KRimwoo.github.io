@@ -180,6 +180,10 @@ p.main-text {
   cursor: pointer;
 }
 
+.detail-info > a:visited {
+  color: #fff;
+}
+
 /* 오른쪽 생년 추가  */
 .right-side {
   position: absolute;
