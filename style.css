@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+
+  background-color: #000;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333;
+}
+
+/* Header styles */
+header {
+  position: fixed; /* 헤더 고정 */
+  top: 0; /* 페이지 맨 위에 고정 */
+  left: 0;
+  right: 0;
+  height: 3rem;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  max-width: 100%;
+
+  background-color: rgba(0, 0, 0, 0); /* 투명한 배경 색상 */
+  transition: background-color 0.3s ease-in-out; /* 배경 색상 전환 효과 */
+}
+/* Header hover */
+header:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Header contents */
+/* left */
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.main-logo {
+  width: 4rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.logo-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.home-logo-link {
+  font-size: 1rem;
+  color: white;
+}
+
+/* right */
+.right-header {
+  display: flex;
+  margin-right: 0.5em;
+  align-items: center;
+}
+
+.search-icon,
+.alarm-icon,
+.profile-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 10px;
+}
+
+.profile-img {
+  border-radius: 5px;
+}
+
+/* Main section styles */
+.main-top {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  height: 56.25vw;
+  align-items: left;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  그라데이션 적용 */
+.main-top::before {
+  content: "";
+  background: linear-gradient(to top, #000, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56.25vw;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-content-container {
+  z-index: 2;
+  display: inline;
+  width: 100%;
+  height: 56.25vw;
+  margin-left: 2em;
+  font-size: 1vw;
+  background-color: rgba(9, 9, 79, 0);
+}
+
+.simple-logo {
+  margin: 6em 0em 0.1em 1em;
+  font-family: "Bebas Neue";
+  font-size: 2em;
+  font-weight: bolder;
+  color: #e50914;
+}
+
+h1 {
+  margin-left: 0.5em;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+}
+
+p.main-text {
+  margin: 2em 0 0 3em;
+  margin-top: 2em;
+  font-family: serif;
+  text-align: left;
+  font-size: 0.7em;
+  color: #ffffff96;
+}
+
+.button-container {
+  display: inline-flex;
+  margin: 2em 0 0 2.5em;
+}
+
+.play {
+  width: 5em;
+  height: 2.4em;
+  border: none;
+  border-radius: 0.3em;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  background-color: #fff;
+  color: #000;
+}
+
+.detail-info {
+  width: 7em;
+  height: 2.4em;
+  margin-left: 0.7em;
+  border: none;
+  border-radius: 0.3em;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  background-color: rgba(145, 145, 145, 0.8);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 오른쪽 생년 추가  */
+.right-side {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  width: 6em;
+  height: 2em;
+  align-items: left;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mini-bar {
+  width: 0.5em;
+  height: 100%;
+  background-color: rgba(256, 256, 256, 0.7);
+}
+
+.birth-year {
+  width: 2em;
+  margin-left: 0.8em;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  color: rgba(256, 256, 256, 0.8);
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(17, 143, 74, 0.8);
+}
+
+/* Content list styles */
+.content-list {
+  position: relative;
+  top: -5em;
+  left: 1em;
+  display: inline;
+  width: 100%;
+  padding: 1em 1em;
+}
+
+/* 리스트 헤더 */
+h2 {
+  margin: 0 0 0.3em 0.5em;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.content-row {
+  display: inline;
+  width: 100%;
+  margin-top: 1em;
+  padding: 2rem;
+}
+
+.box-slider {
+  display: grid;
+  margin: 0 0 1rem 0.7rem;
+  grid-auto-flow: column; /* 아이템 배치 열 방향 */
+  scroll-behavior: auto; /* 스크롤링 기본동작 */
+  gap: 0.4rem; /*아이템 사이 간격*/
+  overflow-y: hidden; /* 위아래 스크롤 x*/
+  overscroll-behavior-x: contain; /* 오버스크롤 방지*/
+  scrollbar-width: none;
+  justify-content: flex-start;
+}
+
+.box-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.box-slider .img-box {
+  display: flex;
+  width: 16rem;
+  height: 9rem;
+  align-items: center;
+  border-radius: 5px;
+  scroll-snap-align: start;
+}
+
+.img-box > a {
+  position: relative;
+}
+
+.img-box > a > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-box > a > .content-title {
+  position: absolute;
+  top: 75%;
+  width: 80%;
+  height: 20%;
+  margin-left: 1em;
+  font-size: 1em;
+  font-family: serif;
+  text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 1);
+  color: #fff;
+}
+
+/* 소속 섹션 */
+.belong > .img-box {
+  position: relative;
+  border-radius: 5px;
+}
+
+.belong > .img-box > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.belong > .img-box > .content-title {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 20%;
+  margin-left: 1em;
+  font-size: 1em;
+  font-family: serif;
+  color: #000;
+}
+
+footer {
+  position: relative;
+  top: -3rem;
+  margin: 0.1rem 1rem;
+  padding-left: 2rem;
+  border-top: #333 solid;
+}
