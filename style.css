@@ -17,10 +17,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: #333;
-}
-
 /* Header styles */
 header {
   position: fixed; /* 헤더 고정 */
@@ -39,6 +35,7 @@ header {
   background-color: rgba(0, 0, 0, 0); /* 투명한 배경 색상 */
   transition: background-color 0.3s ease-in-out; /* 배경 색상 전환 효과 */
 }
+
 /* Header hover */
 header:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -147,12 +144,13 @@ h1 {
 p.main-text {
   margin: 2em 0 0 3em;
   margin-top: 2em;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  font-size: 0.7em;
+  font-size: 1em;
   color: #ffffff96;
 }
 
+/* buttons */
 .button-container {
   display: inline-flex;
   margin: 2em 0 0 2.5em;
@@ -282,7 +280,8 @@ h2 {
   height: 20%;
   margin-left: 1em;
   font-size: 1em;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 1);
   color: #fff;
 }
@@ -305,8 +304,9 @@ h2 {
   height: 20%;
   margin-left: 1em;
   font-size: 1em;
-  font-family: serif;
-  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
 }
 
 footer {
