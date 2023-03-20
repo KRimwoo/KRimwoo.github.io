@@ -7,6 +7,7 @@
 body {
   display: flex;
   justify-content: center;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   background-color: black;
@@ -17,9 +18,10 @@ body {
 }
 
 .mini-window {
-  display: block;
-  width: 70vw;
-  height: 90vw;
+  display: relative;
+  width: 80vw;
+  height: 80vw;
+  font-size: 1.5vw;
   margin: 2rem;
   border: none;
   border-radius: 5px;
@@ -30,11 +32,18 @@ body {
 .image-section {
   position: relative;
   width: 100%;
-  height: 44%;
-  background-color: green;
+  height: 56.25%;
 }
 
 .image-section > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.image-section > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,7 +61,11 @@ body {
   background: linear-gradient(to top, #333, transparent);
 }
 
-.image-section > .close-button {
+button:hover {
+  cursor: pointer;
+}
+
+.image-section > a > .close-button {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -62,21 +75,16 @@ body {
   padding: 0.4em;
   border: none;
   border-radius: 1em;
-  font-size: 1em;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.close-button > a {
-  text-decoration: none;
   font-size: 0.8em;
   color: #ddd;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .image-section > .button-container {
   position: absolute;
   bottom: 4em;
-  left: 4em;
+  left: 3em;
   z-index: 2;
   display: flex;
   width: 50%;
@@ -120,14 +128,15 @@ body {
   left: 3em;
   z-index: 4;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
+  width: 85%;
   height: 80%;
+  margin-right: 2em;
+  justify-content: space-between;
+  line-height: 1.5em;
 }
 
 .text-section > .main-content-container {
-  width: 50%;
+  width: 55%;
   height: 100%;
 }
 
@@ -138,12 +147,13 @@ body {
 
 .main-content-container > p {
   margin-top: 1em;
+  font-size: 0.9em;
   color: #fff;
 }
 
 .text-section > .additional-content-container {
-  width: 40%;
+  width: 30%;
   height: 100%;
-  padding: 2em 0 0 3em;
-  font-size: 1em;
+  padding-top: 1em;
+  font-size: 0.8em;
 }

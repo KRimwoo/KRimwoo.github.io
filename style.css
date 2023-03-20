@@ -176,23 +176,26 @@ p.main-text {
   font-family: sans-serif;
   font-size: 1.5em;
   background-color: rgba(145, 145, 145, 0.8);
-  color: #fff;
   cursor: pointer;
+}
+
+.detail-info > a {
+  color: #fff;
 }
 
 .detail-info > a:visited {
   color: #fff;
 }
 
-/* 오른쪽 생년 추가  */
+/* 오른쪽 나이 추가  */
 .right-side {
   position: absolute;
-  top: 60%;
+  top: 55%;
   right: 0;
   z-index: 3;
   display: flex;
-  width: 6em;
-  height: 2em;
+  width: 7.5em;
+  height: 2.5em;
   align-items: left;
   font-weight: bold;
   font-size: 1.5em;
@@ -207,11 +210,12 @@ p.main-text {
 }
 
 .birth-year {
-  width: 2em;
+  width: 2.2em;
   margin-left: 0.8em;
-  padding: 0.3em;
+  padding-top: 0.4em;
   border-radius: 0.2em;
   color: rgba(256, 256, 256, 0.8);
+  font-size: 1.2em;
   font-family: Impact, "Arial Narrow Bold", sans-serif;
   text-align: center;
   align-items: center;
@@ -236,6 +240,7 @@ h2 {
   color: #fff;
 }
 
+/* 가로줄 컨테이너 */
 .content-row {
   display: inline;
   width: 100%;
@@ -243,6 +248,7 @@ h2 {
   padding: 2rem;
 }
 
+/* 이미지 박스 슬라이더 */
 .box-slider {
   display: grid;
   margin: 0 0 1rem 0.7rem;
@@ -259,6 +265,7 @@ h2 {
   display: none;
 }
 
+/* 이미지 박스 */
 .box-slider .img-box {
   display: flex;
   width: 16rem;
@@ -266,6 +273,12 @@ h2 {
   align-items: center;
   border-radius: 5px;
   scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.img-box:hover {
+  width: 17rem;
+  height: 10rem;
 }
 
 .img-box > a {
@@ -313,6 +326,7 @@ h2 {
   color: #333;
 }
 
+/* footer */
 footer {
   position: relative;
   top: -3rem;
