@@ -148,7 +148,7 @@ button:hover {
 .main-content-container > p {
   margin-top: 1em;
   font-size: 0.9em;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
 }
 
@@ -157,5 +157,5 @@ button:hover {
   height: 100%;
   padding-top: 1em;
   font-size: 0.8em;
-  font-weight: 300;
+  font-weight: 200;
 }
