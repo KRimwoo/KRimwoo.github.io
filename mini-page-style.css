@@ -138,6 +138,7 @@ button:hover {
 .text-section > .main-content-container {
   width: 55%;
   height: 100%;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .main-content-container > h3 {
